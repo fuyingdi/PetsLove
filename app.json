@@ -4,7 +4,8 @@
     "pages/market/market",
     "pages/album/album",
     "pages/my/my",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/addItem/addItem"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,7 +27,12 @@
         "selectedIconPath":"/pages/img/marketSelected.png",
         "text":"市场"
       },
-
+      {
+        "pagePath":"pages/addItem/addItem",
+        "iconPath":"/pages/img/addIcon.png",
+        "selectedIconPath":"/pages/img/addIcon.png",
+        "text":"发布"
+      },
       {
         "pagePath":"pages/album/album",
         "iconPath":"/pages/img/album.png",
