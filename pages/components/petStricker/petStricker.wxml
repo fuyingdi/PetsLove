@@ -1,0 +1,8 @@
+
+<view class="petStricker">
+    <image src="{{petMessage.photoAddress}}" mode="widthFix"></image>
+    <text>{{petMessage.introducer}}</text>
+    <view class="divLine"></view>
+    <text class="trade">￥{{petMessage.money}}</text>
+</view>
+

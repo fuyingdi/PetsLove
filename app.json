@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/market/market",
+    "pages/album/album",
+    "pages/my/my",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "iconPath":"/pages/img/index2.png",
+        "selectedIconPath":"/pages/img/index1.png",
+        "text":"广场"
+      },
+      {
+        "pagePath":"pages/market/market",
+        "iconPath":"/pages/img/car2.png",
+        "selectedIconPath":"/pages/img/car1.png",
+        "text":"求购"
+      },
+      {
+        "pagePath":"pages/album/album",
+        "iconPath":"/pages/img/my2.png",
+        "selectedIconPath":"/pages/img/my1.png",
+        "text":"相册"
+      },
+      {
+        "pagePath":"pages/my/my",
+        "iconPath":"/pages/img/my2.png",
+        "selectedIconPath":"/pages/img/my1.png",
+        "text":"我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

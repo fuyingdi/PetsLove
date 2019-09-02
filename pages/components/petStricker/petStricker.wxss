@@ -1,0 +1,37 @@
+.petStricker{
+  width: 340rpx;
+  background-color:whitesmoke;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  display: block;
+  }
+
+.petStricker image{
+  width: 340rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+
+.petStricker text{
+  padding-left: 18rpx;
+  padding-right: 18rpx;
+  font-size: 28rpx;
+  font-weight: bold; 
+}
+
+.divLine{
+  background: #E0E3DA;
+  margin-left: 10rpx;
+  width: 93%;
+  height: 3rpx;
+  margin-top: 8rpx;
+  margin-bottom: 7rpx;
+}
+
+.petStricker .trade{
+  padding-left: 18rpx;
+  font-size: 35rpx;
+  font-weight: bolder;
+  color: red;
+  margin-bottom: 10rpx;
+}
