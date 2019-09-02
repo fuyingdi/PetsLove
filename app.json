@@ -24,8 +24,9 @@
         "pagePath":"pages/market/market",
         "iconPath":"/pages/img/market.png",
         "selectedIconPath":"/pages/img/marketSelected.png",
-        "text":"求购"
+        "text":"市场"
       },
+
       {
         "pagePath":"pages/album/album",
         "iconPath":"/pages/img/album.png",
