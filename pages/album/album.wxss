@@ -1,1 +1,9 @@
-/* pages/album/album.wxss */
+.upload-image image{
+  width: 23%;
+  height: 10%;
+  margin: 2px;
+}
+
+.upload-image text{
+  text-align: center;  
+}

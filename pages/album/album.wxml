@@ -1,3 +1,73 @@
-<view class="component_album_wrapper">
-  <text class="title">album</text>
+<view class="upload-image" >
+  <image src="/pages/img/camera.png" mode="widthFix" bindtap="chooseImage"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
+  <image src="/pages/components/petStricker/image/chai.jpeg" mode="widthFix"></image>
 </view>
+
+
