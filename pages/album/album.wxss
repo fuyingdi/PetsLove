@@ -1,1 +1,18 @@
-/* pages/album/album.wxss */
+page {  
+    min-height: 100%;  
+    background-color:lightgrey;  
+}  
+
+.album-list{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.album-item{
+    width: 181rpx;
+    height: 181rpx;
+    margin-left: 6rpx;
+    margin-top: 7rpx;
+}

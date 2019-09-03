@@ -1,3 +1,5 @@
-<view class="component_album_wrapper">
-  <text class="title">album</text>
+<view>
+  <view class="album-list">
+      <image  wx:for="{{myPhotosPath}}"  src="{{item}}" data-photoId="{{index}}" mode="scaleToFill" class="album-item" bind:tap="openPreview" />
+  </view>
 </view>
