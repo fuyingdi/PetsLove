@@ -1,3 +1,32 @@
-<view class="component_album_wrapper">
-  <text class="title">album</text>
-</view>
+<scroll-view class="container" scroll-y="true">
+
+    <view class="album-container">
+      <view class="item-group">
+          <view class="album-item">
+              <image mode="aspectFit" src="/pages/img/camera.png"></image>
+              <image mode="aspectFill" src="/pages/img/camera.png"></image>
+              <image mode="aspectFill" src="/pages/img/camera.png"></image>
+              <image mode="aspectFill" src="/pages/img/camera.png"></image>
+          </view>
+      </view>
+        <!-- <view class="item-group" wx:for="{{layoutList}}" wx:for-item="group">
+            <block wx:for="{{group}}" wx:for-item="item">
+                <block wx:if="{{item}}">
+                    <image bindtap="enterPreviewMode" bindlongtap="showActions" data-src="{{item}}" class="album-item" src="{{item}}" mode="aspectFill"></image>
+                </block>
+                <block wx:else>
+                    <view class="album-item empty"></view>
+                </block>
+            </block>
+        </view> -->
+    </view>
+
+
+
+
+    <view class="upload-image" bindtap="chooseImage">
+        <image src="/pages/img/camera.png" mode="widthFix"></image>
+        <text>上传图片</text>
+    </view>
+</scroll-view>
+
