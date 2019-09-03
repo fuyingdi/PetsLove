@@ -1,6 +1,7 @@
 Page({
   data: {
     myPhotosPath:[
+      "./image/upload.png",
       "./image/cat1.jpeg",
       "./image/test.jpeg",
       "./image/chai.jpeg",
@@ -23,12 +24,18 @@ Page({
     var myPhotosPath = this.data.test;
     console.log(e);
     
-    wx.previewImage({
-      current: myPhotosPath[photoId],     //当前图片地址
-      urls: myPhotosPath,               //所有要预览的图片的地址集合 数组形式
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
+    if(photoId==0){
+      console.log("upload todo");
+      wx.chooseImage();
+    }else{
+      photoId=photoId-1;
+      wx.previewImage({
+        current: myPhotosPath[photoId],     //当前图片地址
+        urls: myPhotosPath,               //所有要预览的图片的地址集合 数组形式
+        success: function(res) {},
+        fail: function(res) {},
+        complete: function(res) {},
+      });
+  }
   }
 })
