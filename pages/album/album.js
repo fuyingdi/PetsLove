@@ -39,16 +39,17 @@ Page({
 
     chosenBuffer:[],
 
-    editMode:true
+    editMode:false
   },
   
  
 
 
   chosenImage:function(e){
-    var photoId = e.currentTarget.dataset.photoid;
-    var editMode = this.data.editMode;
-    if(editMode){                           //预览模式下打开图片预览
+    var photoId = e.currentTarget.dataset.photoid;  //获取选中组件的图片id
+
+
+    if(!this.data.editMode){                           //预览模式下打开图片预览
       var myPhotosPath = this.data.test;
       wx.previewImage({
         current: myPhotosPath[photoId],     //当前图片地址
@@ -61,8 +62,15 @@ Page({
 
     }else{                                //编辑模式下放进待删数组
       var notChoosed = this.data.myPhotos[photoId].notChoosed;
-      var operator = "myPhotos["+photoId+"].notChoosed";
+
+      //setData方法只能这样修改页面数据中对象数组中某一对象属性值
+      //只有使用setData方法才能将逻辑层的数据更改动态渲染到视图层
+      var operator = "myPhotos["+photoId+"].notChoosed";  
+
+      //选中图片或撤销选中
       this.setData({[operator]:!notChoosed});
+
+      //判断buffer中是否有重复选取的图片，若有则删除，无则添加
       var cancelFlag=false;
       for(var i=0;i<this.data.chosenBuffer.length;i++){
         if(this.data.chosenBuffer[i].id==this.data.myPhotos[photoId].id){
@@ -74,19 +82,23 @@ Page({
       }
       if(!cancelFlag)
         this.data.chosenBuffer.push(this.data.myPhotos[photoId]);
+
+      //将buffer中的图片对象通过setData方法赋值给imagesChoosed
       this.setData({imagesChoosed:this.data.chosenBuffer});
     }
   },
 
   editModeOn:function(e){
-    this.setData({editMode:false});
+    this.setData({editMode:true});
   },
 
   editModeOff:function(e){
-    this.setData({editMode:true});
+    this.setData({editMode:false});
     
     var length = this.data.myPhotos.length;
-    
+
+    //退出编辑模式，将imagesChoosed和buffer表清空
+    //并将所有被选取图片置于未选取状态
     for(var i=0;i<length;i++){
       var operator = "myPhotos["+i+"].notChoosed";
       this.setData({[operator]:true});
@@ -97,7 +109,7 @@ Page({
   },
 
   uploadImage:function(){
-    if(this.data.editMode){
+    if(!this.data.editMode){
       wx.chooseImage();
     }
   }
