@@ -1,6 +1,6 @@
 Page({
   data: {
-    petStricket:[
+    petSticket:[
       {
         "photoAddress":"./image/cat1.jpeg",
         "introducer":"猫",

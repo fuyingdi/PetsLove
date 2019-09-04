@@ -2,7 +2,7 @@
 <!-- ? -->
 <view>
   <view class="market">
-      <petStricker wx:for="{{petStricket}}" wx:for-index="petId" wx:for-item="pet" id="{{petId}}" petMessage="{{pet}}" bind:tap="openDetail"></petStricker>
+      <petSticker wx:for="{{petSticket}}" wx:for-index="petId" wx:for-item="pet" id="{{petId}}" petMessage="{{pet}}" bind:tap="openDetail"></petSticker>
   </view>
 </view>
 

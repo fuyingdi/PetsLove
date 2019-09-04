@@ -3,11 +3,20 @@ page {
     background-color:lightgrey;  
 }  
 
+.delete-navigator{
+    width: 750rpx;
+    height: 95rpx;
+    background-color: darkgray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .album-list{
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .album-item{

@@ -1,5 +1,5 @@
 
-<view class="petStricker">
+<view class="petSticker">
     <image src="{{petMessage.photoAddress}}" mode="widthFix"></image>
     <text>{{petMessage.introducer}}</text>
     <view class="divLine"></view>
