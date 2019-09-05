@@ -50,10 +50,10 @@ Page({
 
 
     if(!this.data.editMode){                           //预览模式下打开图片预览
-      var myPhotosPath = this.data.test;
+      var myPhotosPath = this.data.test;               //不能是本地地址 要求url
       wx.previewImage({
         current: myPhotosPath[photoId],     //当前图片地址
-        urls: myPhotosPath,               //所有要预览的图片的地址集合 数组形式
+        urls: myPhotosPath,               //所有要预览的图片的地址集合 数组形式 
         success: function(res) {},
         fail: function(res) {},
         complete: function(res) {},

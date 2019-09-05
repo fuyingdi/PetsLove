@@ -3,8 +3,36 @@ page {
     background-color:lightgrey;  
 } 
 
-.album-list{
+.my{
+    flex-direction: column;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: stretch;
+}
+
+.my-info{
     flex-direction: row;
     display: flex;
-    flex-wrap: wrap;
+    height: 300rpx;
+    background-color: white;
+    margin-bottom: 40rpx;
+    align-items: center;
+}
+
+.my-info image{
+    width: 150rpx;
+    height: 150rpx;
+    margin: 75rpx;
+    border-radius: 50%;
+}
+
+.my-info text{
+    color:black;
+    align-self: center;
+    justify-self: center;
+}
+
+.my-action{
+    height: 400rpx;
+    background-color: white;
 }

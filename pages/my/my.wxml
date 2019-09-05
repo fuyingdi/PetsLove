@@ -1,7 +1,9 @@
-
-<view>
-  <view class="album-list">
-    <photoSticker photoAddress="./image/cat1.jpeg"></photoSticker>
-    <photoSticker photoAddress="./image/suzume.jpeg"></photoSticker>
+<view class="my">
+  <view class="my-info">
+    <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view > <text class="userinfo-nickname">{{userInfo.nickName}}</text> 
+            <text ></text></view>
   </view>
+  <view class="my-action"></view>
+
 </view>
