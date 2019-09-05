@@ -1,9 +1,29 @@
-.upload-image image{
-  width: 23%;
-  height: 10%;
-  margin: 2px;
+
+page {  
+    min-height: 100%;  
+    background-color:lightgrey;  
+}  
+
+.delete-navigator{
+    width: 750rpx;
+    height: 95rpx;
+    background-color: darkgray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.upload-image text{
-  text-align: center;  
+.album-list{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-item{
+    width: 181rpx;
+    height: 181rpx;
+    margin-left: 6rpx;
+    margin-top: 7rpx;
+>>>>>>> yangxiaolang
 }

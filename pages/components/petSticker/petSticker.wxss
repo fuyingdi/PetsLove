@@ -1,4 +1,4 @@
-.petStricker{
+.petSticker{
   width: 340rpx;
   background-color:whitesmoke;
   border-radius: 10rpx;
@@ -6,13 +6,13 @@
   display: block;
   }
 
-.petStricker image{
+.petSticker image{
   width: 340rpx;
   border-top-left-radius: 10rpx;
   border-top-right-radius: 10rpx;
 }
 
-.petStricker text{
+.petSticker text{
   padding-left: 18rpx;
   padding-right: 18rpx;
   font-size: 28rpx;
@@ -28,7 +28,7 @@
   margin-bottom: 7rpx;
 }
 
-.petStricker .trade{
+.petSticker .trade{
   padding-left: 18rpx;
   font-size: 35rpx;
   font-weight: bolder;

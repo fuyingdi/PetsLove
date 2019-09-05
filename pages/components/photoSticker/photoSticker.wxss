@@ -1,0 +1,22 @@
+.photoSticker{
+    width: 181rpx;
+    height: 181rpx;
+    margin-left: 6rpx;
+    margin-top: 7rpx;
+    display: block;
+    position: relative;
+}
+
+.photoSticker image{
+    position: absolute;
+    width: 181rpx;
+    height: 181rpx;
+    z-index: 1;
+}
+
+.photoSticker icon{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+}

@@ -1,3 +1,9 @@
-<view class="component_my_wrapper">
-  <text class="title">My</text>
+<view class="my">
+  <view class="my-info">
+    <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view > <text class="userinfo-nickname">{{userInfo.nickName}}</text> 
+            <text ></text></view>
+  </view>
+  <view class="my-action"></view>
+
 </view>

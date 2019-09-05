@@ -1,9 +1,10 @@
 Component({
     properties:{
-        petMessage:{
+        photoMessage:{
             type:Object,
             data:""
-        }
+        },
+
     },
 
     data:{
@@ -12,5 +13,6 @@ Component({
 
     methods:{
         
+            
     }
 })

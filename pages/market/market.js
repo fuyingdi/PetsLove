@@ -1,6 +1,6 @@
 Page({
   data: {
-    petStricket:[
+    petSticket:[
       {
         "photoAddress":"./image/cat1.jpeg",
         "introducer":"猫",
@@ -27,5 +27,13 @@ Page({
         "money":"100"
       }
     ]
+  },
+
+
+
+  openDetail:function(event){
+    var postId = event.currentTarget.id;
+    console.log(postId);
+    console.log(event);
   }
 })
