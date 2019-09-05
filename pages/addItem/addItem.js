@@ -3,23 +3,23 @@ Page({
     animation:""
   },
   onShow:function(){
-    var left = wx.createAnimation({
+    var animation = wx.createAnimation({
       duration: 1000,
       timingFunction: 'liner',
       delay: 0
     });
-    left.rotate(180*2).step();
-    this.setData({
-      left:left.export()
-    })
-    var right = wx.createAnimation({
-      duration: 1000,
-      timingFunction: 'liner',
-      delay: 0
-    });
-    right.rotate(-180*2).step();
-    this.setData({
-      right:right.export()
-    })
+    var next=true;
+    setInterval(function () {
+      if (next) {
+        animation.scale(0.9).step()
+        next = !next;
+      } else {
+        animation.scale(1).step()
+        next = !next;
+      }
+      this.setData({
+        animation: animation.export()
+      })
+    }.bind(this), 500)
   }
 })

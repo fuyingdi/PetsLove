@@ -1,13 +1,13 @@
 <view class="addItem">
   <view>
-    <image src="./image/sharePets.png" mode="scaleToFill" bind:tap="uploadShare" animation="{{left}}"/>
+    <image src="./image/sharePets.png" mode="scaleToFill" bind:tap="uploadShare" animation="{{animation}}"/>
     <view class="text">
       <text>爱宠分享</text>
     </view>
   </view>
 
   <view>
-    <image src="./image/petShopPost.png" mode="scaleToFill" bind:tap="uploadTrade" animation="{{right}}"/>
+    <image src="./image/petShopPost.png" mode="scaleToFill" bind:tap="uploadTrade" animation="{{animation}}"/>
       <view class="text">
         <text>宠物转让</text>
       </view>
