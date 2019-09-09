@@ -1,0 +1,17 @@
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color:lightgrey;  
+  margin-top: 15rpx;
+  margin-left: 17rpx;
+  margin-right: 20rpx;
+}  
+
+
+.market{
+  column-count: 2;
+  column-gap: 5rpx;
+}
+
+
+

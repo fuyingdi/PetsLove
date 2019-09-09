@@ -1,0 +1,20 @@
+
+
+<view hidden="{{!editMode}}" class="delete-navigator">
+  <button type="primary" size="mini" bind:tap="editModeOff">取消</button>
+  <text >({{imagesChoosed.length}}/{{myPhotos.length}})</text>
+  <button type="primary" size="mini">确定</button>
+</view>
+
+
+<view>
+  <view class="album-list">
+    <image src="./image/upload.png" bind:tap="uploadImage" class="album-item"/>
+    <!-- <image  wx:for="{{myPhotosPath}}"  src="{{item}}" data-photoid="{{index}}" mode="scaleToFill" class="album-item" 
+    bind:tap="chosenImage" bind:longpress="editModeOn"/> -->
+    <photoSticker wx:for="{{myPhotos}}" photoMessage="{{item}}" data-photoid="{{index}}" wx:key="id"
+    bind:tap="chosenImage" bind:longpress="editModeOn"></photoSticker>
+  </view>
+</view>
+<!-- <icon type="success" size="15" /> -->
+

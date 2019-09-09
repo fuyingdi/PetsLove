@@ -1,0 +1,63 @@
+/**index.wxss**/
+@import "../../lib/weui.wxss";
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.avatar-image-box{
+    height:400rpx;
+    text-align: center;
+    margin-bottom: 5rpx;
+    background-color:#63c0e1;
+    background: linear-gradient(to right,#63c0e1,#92e2d6);
+}
+.avatar-image{
+    margin:auto;
+    position:absolute;
+    left:40%;
+    top:5%;
+    width:140rpx;
+    height: 140rpx;
+    border-radius:70rpx;
+}
+.nickname{
+  position: relative;
+  font-weight: 1200;
+  color: rgb(20,20,20);
+  font-size:1rem;
+  top:55%;
+}
+
+.item{
+    height:55rpx;
+    padding:5rpx 10rpx;
+    margin-top:-1rpx;
+    border-top:1rpx solid #CCC;
+    border-bottom:1rpx solid #CCC;
+    font-size:1.2rem;
+}
+
+text{
+    display: inline-block;
+    width:40%;
+}
+
+input{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.ali{
+    display:inline-block;
+    width:1.2rem;
+    height:1.2rem;
+    border:1px solid black;
+    background-size: cover;
+}
+.icon-nickname{
+    background-image: url('https://www.wangwei2000.cn/petlove_source/icons/nickname.png') no-repeat;
+}

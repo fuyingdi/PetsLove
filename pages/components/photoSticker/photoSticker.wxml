@@ -1,0 +1,4 @@
+<view class="photoSticker">
+    <image src="{{photoMessage.photoAddress}}" />
+    <icon type="success"  size="17" hidden="{{photoMessage.notChoosed}}"/>
+</view>

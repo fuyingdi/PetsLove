@@ -1,0 +1,9 @@
+
+<!-- ? -->
+<view>
+  <view class="market">
+      <petSticker wx:for="{{petSticket}}" wx:for-index="petId" wx:for-item="pet" id="{{petId}}" petMessage="{{pet}}" wx:key="photoAddress"
+      bind:tap="openDetail"></petSticker>
+  </view>
+</view>
+

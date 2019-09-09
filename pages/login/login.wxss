@@ -1,0 +1,29 @@
+/* pages/login/login.wxss */
+
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40%;
+}
+
+
+
+.inputcss{
+    font-size:40rpx;
+    height:70rpx;
+    margin-left: 100rpx;
+    margin-right: 100rpx;
+    padding-right: 20rpx;
+    padding-left: 20rpx;
+    border-radius:10rpx;
+    border:2px solid #c8cccf;
+    color:#6a6f77;
+}
+
+.getUserInfoButton{
+    margin-top: 200rpx;
+    padding-left: 175rpx;
+    padding-right: 175rpx;
+}

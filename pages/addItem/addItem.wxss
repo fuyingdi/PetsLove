@@ -1,0 +1,21 @@
+page {  
+    min-height: 100%;  
+    background-color: ghostwhite
+}  
+
+.addItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 1400rpx;
+    flex-wrap: wrap;
+}
+
+.addItem image{
+    width: 220rpx;
+    height: 220rpx;
+}
+
+.text{
+    text-align: center;
+}

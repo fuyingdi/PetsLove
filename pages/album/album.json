@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+      "photoSticker":"../components/photoSticker/photoSticker"
+  }
+}

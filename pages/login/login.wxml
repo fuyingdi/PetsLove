@@ -1,0 +1,10 @@
+
+<view class="userinfo">
+  <text style="font-size:50rpx;margin-bottom:20rpx;color:red">请注册一个用户名</text>
+  <input class="inputcss" placeholder="必填" type="text" bindblur="bindblurAccountInput"/>
+  <text >{{tip[tipIndex]}}</text>
+</view> 
+
+<view class="getUserInfoButton">
+  <button open-type="getUserInfo" bindgetuserinfo="bindgetUserInfo" >登录授权</button>
+</view>

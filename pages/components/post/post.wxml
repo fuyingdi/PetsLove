@@ -1,0 +1,5 @@
+<view class='inner'>
+    <text>
+        {{data.number}}
+    </text> 
+</view>
