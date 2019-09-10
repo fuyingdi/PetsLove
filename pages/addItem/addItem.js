@@ -21,5 +21,15 @@ Page({
         animation: animation.export()
       })
     }.bind(this), 500)
+  },
+  uploadTrade:function(){
+    wx.navigateTo({
+      url: '/pages/addItem/addItem_sell',
+    })
+  },
+  uploadShare:function(){
+    wx.navigateTo({
+      url: '/pages/addItem/addItem_share',
+    })
   }
 })

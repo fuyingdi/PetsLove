@@ -37,10 +37,27 @@ App({
                         success(res){
                             console.log("sendCode response:");
                             console.log(res.data);
+                            that.globalData.header.cookie = 'JSESSIONID=' + res.data.session_id;
                             if(res.data.type==="success"){
                                 that.globalData.registered = true;
+                                that.petloveRequest({
+                                    url: api.getUserInfoUrl,
+                                    method: "POST",
+                                    header: that.globalData.header,
+                                    success(res_getUserInfo) {
+                                      //存入用户信息在全局数据里，并重定向至主页
+                                      console.log("从开发者服务器获取用户信息：" + res_getUserInfo.data);
+                                      that.globalData.userInfo = res_getUserInfo.data;
+                                      wx.switchTab({
+                                        url: "/pages/index/index"
+                                      })
+                                    }
+                                });
+                            }else{
+                                wx.navigateTo({
+                                    url:"/pages/login/login"
+                                })
                             }
-                            that.globalData.header.cookie = 'JSESSIONID=' + res.data.session_id;
                         }
                     })
                 } else {
@@ -78,10 +95,12 @@ App({
     
     //封装了带有session_id的request请求
     petloveRequest:function(data){
+        console.log("fuck"+data.data);
         wx.request({
             url:data.url,
             method:data.method,
             header:this.globalData.header,
+            data:JSON.stringify(data.data),
             success:function(res){
                 if(data.success){
                     data.success(res);

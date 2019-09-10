@@ -4,14 +4,22 @@ var app = getApp();
 Page({
   data: {
     modifiedFlag:false,
-    userInfo:{nickname:'',gender:2,email:'',signature:'',birthday:'',country:'',province:'',city:''},
+    userInfo:{nickname:'未填写',gender:0,email:'未填写',signature:'还没有自己的个性签名',birthday:'',country:'',province:'',city:''},
     region:["河北省","秦皇岛","海港区"],
     genderrange:['女','男'],
+    wordCount:0
   },
   onLoad: function() {
     console.log("onLoad");
+    if(Object.keys(app.globalData.userInfo).length == 0)
+      return;
+    console.log("not null");
     this.setData({
       userInfo:app.globalData.userInfo
+    })
+    console.log(this.data.userInfo);
+    this.setData({
+      wordCount:this.data.userInfo.signature.length
     })
   },
 
@@ -25,17 +33,19 @@ Page({
     console.log("onUnload");
     let that = this;
     if(this.data.modifiedFlag){
+      console.log("flag:"+this.data.modifiedFlag);
       //将用户信息存入app.js
       app.globalData.userInfo=this.data.userInfo;
+      console.log("++++++++++")
+      console.log(this.data.userInfo)
+      console.log(JSON.stringify(this.data.userInfo))
       //向开发者发送更改后的用户信息
       console.log(that.data.userInfo);
-      var session_id = 'JSESSIONID='+app.globalData.header.cookie;
-      var myheader = {cookie:session_id,content_type:"text/plain"};
-      wx.request({
+      console.log(typeof(that.data.userInfo))
+      app.petloveRequest({
         url:api.modifyUserInfo,
         method:"POST",
         data:that.data.userInfo,
-        header:myheader,
         success:function(res){
           that.setData({
             modifiedFlag:false
@@ -106,7 +116,18 @@ Page({
       [signature]:e.detail.value
     });
     this.modified();
+    console.log("wandan");
   },
+
+  checkWordsCount:function(e){
+    var count=e.detail.cursor;
+    this.setData({
+      wordCount:count
+    });
+  },
+
+
+
   modified:function(){
     this.setData({
       modifiedFlag:true

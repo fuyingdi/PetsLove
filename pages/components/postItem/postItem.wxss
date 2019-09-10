@@ -1,0 +1,43 @@
+page{
+    height: 100%;
+}
+
+.avatar{
+    width:90rpx;
+    height: 90rpx;
+    border-radius: 45rpx;
+    position: absolute;
+}
+
+.post-nickname{
+    position:absolute;
+    left:135rpx;
+    top:37rpx;
+    font-weight: 1000;
+    font-size: 30rpx;
+}
+
+.post-box{
+    display: block;
+    margin:15rpx 30rpx;
+    background-color: #cff;
+    height: 65%; /*自适应*/
+}
+
+.content{
+    display:block;
+    height: 30%;    /*自适应*/
+    max-height: 30%;
+    position: relative;
+    top:100rpx;
+    background-color: red;
+    margin-bottom: 100rpx;
+}
+
+.image-box{
+    display: block;
+    position: relative;
+    top:20rpx;
+    background-color: blue;
+    height: 40%;
+}

@@ -1,0 +1,6 @@
+<view class="post-box">
+    <image class="avatar" src="{{postItemData.avatar}}" />
+    <text class="post-nickname">{{postItemData.nickname}}</text>
+    <view class="content">{{postItemData.content}}</view>
+    <view class="image-box" wx:for="{{postItemData.picture}}"></view>
+</view>

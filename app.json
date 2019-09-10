@@ -1,12 +1,15 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/my/my",
     "pages/index/index",
+    "pages/my/my",
 	  "pages/market/market",
     "pages/album/album",
     "pages/addItem/addItem",
-    "pages/myInfo/myInfo"
+    "pages/myInfo/myInfo",
+    "pages/login/login",
+    "pages/showPost/showPost",
+    "pages/addItem/addItem_share",
+    "pages/addItem/addItem_sell"
   ],
   "window": {
     "backgroundTextStyle": "light",
