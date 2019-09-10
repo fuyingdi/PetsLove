@@ -1,6 +1,4 @@
 <!-- ? -->
-<view  wx:for="{{postdata}}" wx:for-item="item" wx:key="post1" wx:for-index="idx" >
-    <text class="inner">
-        {{item}}
-    </text> 
-</view>
+<post wx:for="{{postdata}}" wx:for-item="post_item" postdata="{{post_item}}">
+
+</post>

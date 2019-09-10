@@ -1,13 +1,41 @@
 // pages/index/index.js
+const api = require('../../config/config.js');
+var app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    postdata:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
-    count:18
+    postdata:[],
+    page:0
   },
+
+  onShow:function(){
+    var that = this;
+    var now = new Date().getTime();
+    //进入该页面时应该加载第一页
+    app.petloveRequest({
+      url:api.getPostInfoList,
+      method:"POST",
+      data:{
+        page:1,
+        timestamp:now,
+      },
+      success(res){
+        //获取到第一页的数据
+        that.setData({
+          postdata:res.data,
+          page:that.data.page+1
+        })
+      },
+      fail(res){
+        console.log("获取广场首页失败");
+      }
+    })
+  },
+
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
@@ -19,14 +47,27 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var array = this.data.postdata;
-    for(var i=0;i<3;i++){
-      array.push(i+this.data.count);
-    }
-    this.setData({
-      postdata:array
+    var that = this;
+    var now = new Date().getTime();
+    app.petloveRequest({
+      url:api.getPostInfoList,
+      method:"POST",
+      data:{
+        page:that.data.page,
+        timestamp:now
+      },
+      success(res){
+        var allPage = that.data.postdata;
+        allpage = allpage.concat(res.data);
+        that.setData({
+          postdata:allpage,
+          page:that.data.page
+        })
+      },
+      fail(){
+        console.log("获取广场页面失败");
+      }
     })
-    this.data.count=this.data.count+3;
   },
 
 })
