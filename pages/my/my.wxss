@@ -75,7 +75,7 @@ page {
     border-top: 4rpx solid #999;
     border-right: 4rpx solid #999;
     transform: rotate(45deg);
-    position: fixed;
+    position: absolute;
     right: 50rpx;
 }
 
@@ -86,5 +86,5 @@ page {
     border-right: 4rpx solid #999;
     transform: rotate(45deg);
     right: 50rpx;
-    position: fixed;
+    position: absolute;
 }

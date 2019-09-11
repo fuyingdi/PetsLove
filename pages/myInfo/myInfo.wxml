@@ -1,4 +1,4 @@
-<view class="avatar-item">
+<view class="avatar-item" bind:tap="modifyAvatar" hover-class="bg_lightgrey">
   <text>头像</text>
   <image src="{{userInfo.avatar}}" class="avatar-image" />
   <view class="arrow" />

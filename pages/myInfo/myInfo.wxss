@@ -75,3 +75,7 @@ input{
     padding-top: 5rpx;
     background-color: white;
 }
+
+.bg_lightgrey{
+    background-color: #EDEDED;
+}
