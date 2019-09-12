@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-=======
 const api = require('../../config/config.js');
 var app = getApp();
 
->>>>>>> yangxiaolang
 Page({
   data: {
     userInfo:{
       avatarUrl:"./icon/icon.jpg",
-<<<<<<< HEAD
-      nickName:"浪先生"
-    }
-  }
-  
-=======
       nickName:"浪先生",
       sign:"浪先生生气了"
     }
@@ -31,5 +22,4 @@ Page({
   
 
 
->>>>>>> yangxiaolang
 })

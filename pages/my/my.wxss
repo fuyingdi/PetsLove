@@ -1,15 +1,9 @@
 page {  
     min-height: 100%;  
-<<<<<<< HEAD
-    background-color:lightgrey;  
-} 
-
-=======
     background-color:#EDEDED;
 } 
 
 @import "../../lib/weui.wxss";
->>>>>>> yangxiaolang
 .my{
     flex-direction: column;
     display: flex;
@@ -29,22 +23,6 @@ page {
 .my-info image{
     width: 150rpx;
     height: 150rpx;
-<<<<<<< HEAD
-    margin: 75rpx;
-    border-radius: 50%;
-}
-
-.my-info text{
-    color:black;
-    align-self: center;
-    justify-self: center;
-}
-
-.my-action{
-    height: 400rpx;
-    background-color: white;
-}
-=======
     margin: 45rpx;
     border-radius: 50%;
 }
@@ -110,4 +88,3 @@ page {
     right: 50rpx;
     position: absolute;
 }
->>>>>>> yangxiaolang
