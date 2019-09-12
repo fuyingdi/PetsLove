@@ -1,0 +1,23 @@
+<view class="post-box">
+    <view class="avatar-nickname-box">
+        <image class="avatar" src="{{postItemData.avatar}}" />
+        <text class="post-nickname">yangyi{{postItemData.nickname}}</text>
+    </view>
+    <text class="title">人在广东已经嫖到失联</text>
+    <view class="content">
+        人在广东已经嫖到失联，又怀念当初那姿势那么经典，有时候怀念当初的价格已改变，嫖到最后，一无所有，才无所畏惧
+{{postItemData.content}}</view>
+    <view class="image-box" >
+        <!-- <image wx:for="{{postItemData.picture}}" wx:for-item="showpicture" src="{{showpicture}}" /> -->
+
+        <image wx:for="{{postItemData.picture}}" wx:for-item="item" src="{{item}}" data-photoid="{{index}}"  bind:tap="bindtapShowPhoto" class="image"/>
+    </view>
+    <view class="divLine"></view>
+    <view class="function-sheet">
+        <image wx:if="{{collect}}" src="./icon/collect.png" class="icon" bind:tap="isCollect"/>
+        <image wx:else src="./icon/hascollected.png" class="icon" bind:tap="isCollect"/>
+        <image wx:if="{{like}}" src="./icon/like.png" class="icon" bind:tap="isLike" />
+        <image wx:else src="./icon/haslikes.png" class="icon" bind:tap="isLike"/>
+        <!-- <text>没有人觉得很赞</text> -->
+    </view>
+</view>

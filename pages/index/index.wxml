@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 <view class="component_index_wrapper">
   <text class="title">Index</text>
 </view>
+=======
+<!-- ? -->
+<postInfo data-id="{{post_item.post_id}}" wx:for="{{postdata}}" wx:for-item="post_item" postdata="{{post_item}}"
+bind:tap="bindtapShowPost">
+
+</postInfo>
+>>>>>>> yangxiaolang

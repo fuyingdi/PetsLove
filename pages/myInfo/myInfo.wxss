@@ -1,0 +1,81 @@
+/**index.wxss**/
+
+page{
+    min-height: 100%;
+    background: #EDEDED;
+}
+
+
+@import "../../lib/weui.wxss";
+.avatar-item{
+    height: 180rpx;
+    padding:5rpx 10rpx;
+    font-size:34rpx;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    margin-bottom: 5rpx;
+}
+
+.avatar-image{
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    margin-left: 230rpx;
+}
+
+.item{
+    height:90rpx;
+    padding:5rpx 10rpx;
+    font-size:36rpx;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    margin-bottom: 2rpx;
+}
+
+
+
+
+text{
+    display: inline-block;
+    width:250rpx;
+    padding-left: 23rpx;
+}
+
+.title{
+    margin-top: 15rpx;
+    margin-bottom: 5rpx;
+    padding-left: 28rpx;
+    padding-right: 25rpx;
+    color: #999999;
+    font-size: 36rpx;
+}
+
+input{
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+}
+
+.arrow{
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #999;
+    border-right: 4rpx solid #999;
+    transform: rotate(45deg);
+    margin-left: 30rpx;
+}
+
+.textarea{
+    height: 100rpx;
+    padding-left: 28rpx;
+    padding-top: 5rpx;
+    background-color: white;
+}
+
+.bg_lightgrey{
+    background-color: #EDEDED;
+}

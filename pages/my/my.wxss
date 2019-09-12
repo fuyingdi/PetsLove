@@ -1,8 +1,15 @@
 page {  
     min-height: 100%;  
+<<<<<<< HEAD
     background-color:lightgrey;  
 } 
 
+=======
+    background-color:#EDEDED;
+} 
+
+@import "../../lib/weui.wxss";
+>>>>>>> yangxiaolang
 .my{
     flex-direction: column;
     display: flex;
@@ -22,6 +29,7 @@ page {
 .my-info image{
     width: 150rpx;
     height: 150rpx;
+<<<<<<< HEAD
     margin: 75rpx;
     border-radius: 50%;
 }
@@ -36,3 +44,70 @@ page {
     height: 400rpx;
     background-color: white;
 }
+=======
+    margin: 45rpx;
+    border-radius: 50%;
+}
+
+/* .my-info text{
+    color:black;
+    margin-top: 150rpx;
+    align-self: center;
+    justify-self: center;
+} */
+
+.my-action{
+    height: auto;
+    background-color: white;
+    margin-bottom: 40rpx;
+}
+
+
+.nickname{
+    font-size: 38rpx;
+}
+.sign{
+    color: darkgray;
+    font-size: 28rpx; 
+    word-wrap: break-word;
+}
+
+
+.item{
+    height:70rpx;
+    padding:5rpx 10rpx;
+    font-size:34rpx;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    margin-bottom: 2rpx;
+}
+
+
+
+.label{
+    display: inline-block;
+    padding-left: 28rpx;
+    font-size: 36rpx;
+}
+.arrow{
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #999;
+    border-right: 4rpx solid #999;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 50rpx;
+}
+
+.my-info-arrow{
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #999;
+    border-right: 4rpx solid #999;
+    transform: rotate(45deg);
+    right: 50rpx;
+    position: absolute;
+}
+>>>>>>> yangxiaolang

@@ -1,4 +1,10 @@
 {
+<<<<<<< HEAD
   "component": true,
   "usingComponents": {}
+=======
+  "usingComponents": {
+    "postInfo": "../components/postInfo/postInfo"
+  }
+>>>>>>> yangxiaolang
 }

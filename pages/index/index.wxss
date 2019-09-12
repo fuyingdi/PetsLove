@@ -1,0 +1,4 @@
+/* pages/index/index.wxss */
+.inner{
+    background-color: red;
+}

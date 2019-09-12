@@ -1,0 +1,11 @@
+<view class="floor-box">
+    <view class="avatar-nickname-box">
+        <image src="{{}}" class="avatar" />
+        <text class="floor-nickname">yangyi</text>
+    </view>
+    <view  class="cite-box">
+        <text class="cite">91夯先生锒铛入狱了</text>
+    </view>
+    <text class="reply">wdnmd真就扫黄啊</text>
+    <view class="divLine"></view>
+</view>

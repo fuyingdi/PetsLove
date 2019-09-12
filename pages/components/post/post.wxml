@@ -1,0 +1,6 @@
+<view id class="post-box">
+    <image class="avatar" src="{{postList.avatar}}" />
+    <text class="post-nickname">{{postList.nickname}}</text>
+    <view class="outline">{{postList.outline}}</view>
+    <view class="image-box" wx:for="{{postList.picture}}"></view>
+</view>
