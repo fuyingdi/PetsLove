@@ -3,7 +3,8 @@ Page({
     files: [],
     textAreaCount: 0,
     showTopTips: false,
-
+    multiIndex: [0, 0, 0],
+    multiArray: [['狗', '猫'], ['哈士奇', '金毛', '松狮', '萨摩耶', '边牧']],
     radioItems: [],
     dogs: [
       { name: '哈士奇', value: '0' },
@@ -166,5 +167,35 @@ Page({
         }
       }
     });
-  }
+  },
+  bindMultiPickerColumnChange: function (e) {
+    console.log('修改的列为', e.detail.column, '，值为', e.detail.value);
+    var data = {
+      multiArray: this.data.multiArray,
+      multiIndex: this.data.multiIndex
+    };
+    data.multiIndex[e.detail.column] = e.detail.value;
+    switch (e.detail.column) {
+      case 0:
+        switch (data.multiIndex[0]) {
+          case 0:
+            data.multiArray[1] = ['哈士奇', '金毛', '松狮', '萨摩耶', '边牧'];
+            break;
+          case 1:
+            data.multiArray[1] = ["暹罗", '英短', '布偶','波斯猫'];
+            break;
+        }
+        data.multiIndex[1] = 0;
+        data.multiIndex[2] = 0;
+        break;
+    }
+    console.log(data.multiIndex);
+    this.setData(data);
+  },
+  bindMultiPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      multiIndex: e.detail.value
+    })
+  },
 });

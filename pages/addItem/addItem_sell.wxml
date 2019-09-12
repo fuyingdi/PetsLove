@@ -3,7 +3,7 @@
     <view class="page__bd">
         <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
 
-        <view class="page__bd">
+        <!-- <view class="page__bd">
           <view class="weui-btn-area">
             <button class="weui-btn" type="default" bindtap="open">宠物类型</button>
           </view>
@@ -21,12 +21,24 @@
                     </view>
                 </label>
             </radio-group>
-        </view>
+        </view> -->
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <button class="weui-btn" type="default">选择宠物类型</button>
+            <view>当前选择：{{multiArray[1][multiIndex[1]]}}</view>
+        </picker>
+
 
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
                 <view class="weui-cell__bd">
                     <input class="weui-input" placeholder="宠物名" />
+                </view>
+            </view>
+        </view>
+                <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="价格" />
                 </view>
             </view>
         </view>
