@@ -160,7 +160,7 @@ Page({
             }else{
               wx.showToast();
             
-              // console.log(uploadRes['data'])
+              console.log(uploadRes['data'])
               // console.log(JSON.parse(uploadRes['data'])['avatar'])
               var avatar = JSON.parse(uploadRes['data'])['avatar']
               that.setData({

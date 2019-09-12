@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/showPost/showPost",
     "pages/index/index",
     "pages/my/my",
 	  "pages/market/market",
@@ -7,7 +8,7 @@
     "pages/addItem/addItem",
     "pages/myInfo/myInfo",
     "pages/login/login",
-    "pages/showPost/showPost",
+
     "pages/addItem/addItem_share",
     "pages/addItem/addItem_sell"
   ],

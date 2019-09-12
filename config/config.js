@@ -1,5 +1,5 @@
-// const baseUrl = "http://39.105.164.202:8080/Petlove/"
-const baseUrl = "http://168.192.31.181:8080/Petlove/"
+const baseUrl = "http://39.105.164.202:8080/Petlove/"
+// const baseUrl = "http://168.192.31.181:8080/Petlove/"
 
 const sendCodeUrl = baseUrl + 'userInfo/sendCode';
 const sendUserInfoUrl = baseUrl + "userInfo/sendUserInfo";
