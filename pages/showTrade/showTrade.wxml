@@ -1,0 +1,16 @@
+<view class="trade-box">
+    <view class="avatar-nickname-box">
+        <image class="avatar" src="{{tradeData.avatar}}" />
+        <text class="nickname">yangyi{{tradeData.nickname}}</text>
+    </view>
+    <view class="text-box">
+        <text class="price">￥{{tradeData.price}}</text>
+        <text class="bleed">品种：{{tradeData.bleed}}</text>
+    </view>
+    <view class="content">{{tradeData.content}}</view>
+    <view class="image-box" >
+        <image wx:for="{{tradeData.picture}}" mode="widthFix" wx:for-item="item" src="{{item}}" data-photoid="{{index}}"  bind:tap="bindtapShowPhoto" class="image"/>
+    </view>
+</view>
+
+<view class="chat-sheet" bind:tap="bindtapChat">和TA私聊</view>

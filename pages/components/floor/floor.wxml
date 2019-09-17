@@ -1,0 +1,17 @@
+<view class="floor-box">
+    <view class="avatar-nickname-box">
+        <image src="{{floorData.avatar}}" class="avatar" />
+        <view class="nickname-floornumber-box">
+            <text class="floor-nickname">{{floorData.nickname}}</text>
+            <text class="floor-number">第{{floorNumber+1}}楼</text>
+        </view>
+        
+        <view class="publish-time" >{{floorData.publish_time}}</view>
+    </view>
+    <view wx:if="{{floorData.cite_content}}" class="cite-box">
+        <text class="cite">{{floorData.cite_content}}</text>
+    </view>
+    <text class="reply">{{floorData.content}}</text>
+    <view class="divLine"></view>
+    
+</view>

@@ -1,0 +1,36 @@
+<!-- 标题 -->
+<view class="title-box">
+    {{to.nickname}}
+    <view class="more-menu" bindtap="actionSheet">···</view>
+</view>
+<!-- 聊天内容 -->
+<view class="chat-content-background">
+    <scroll-view class="content-position" scroll-y scroll-with-animation="true" scroll-into-view="{{newPosition}}">
+        <!-- 遍历消息记录 -->
+        <block wx:for="{{record}}" wx:key="index">
+            <view id="{{'msg' + index}}">
+                <!-- 我的消息 -->
+                <view class="message-box clearFix" wx:if="{{item.from == userInfo.account}}">
+                    <navigator url="/pages/myInfo/myInfo">
+                        <image class="my-head-image" src="{{userInfo.avatar}}" />
+                    </navigator>
+                    <view class="my-message">{{item.msg}}</view>
+                </view>
+                <!-- 朋友消息 -->
+                <view wx:else>
+                    <!-- 服务器提示消息 -->
+                    <view class="tip" wx:if="{{item.type == '2'}}">离线消息 {{item.date}}</view>
+                    <view class="message-box">
+                        <image class="friend-head-image" src="{{to.avatar}}" bindtap="getHisInfo"/>
+                        <view class="friend-message">{{item.msg}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>
+<!-- 输入组件 -->
+<form class="input-position">
+    <input class="input-box" placeholder="输入内容..." bindinput="inputTap" bindconfirm="sendMessage" value="{{input_content}}" />
+    <button class="btn-send" bindtap="sendMessage">发送</button>
+</form>

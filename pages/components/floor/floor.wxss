@@ -1,0 +1,80 @@
+page{
+    background-color: #ededed
+}
+
+.floor-box{
+    display: flex;
+    margin:0rpx 0rpx;
+    max-height: 50%; /*自适应*/
+    flex-direction:column;
+    padding:20rpx;
+    background-color: white
+}
+
+.avatar-nickname-box{
+    display: flex;
+    flex-direction: row;
+    height: 110rpx;
+    align-items: center;        /*纵轴居中*/
+}
+
+.avatar{
+    margin-left: 20rpx;
+    width:90rpx;
+    height: 90rpx;
+    border-radius: 45rpx;
+}
+
+.nickname-floornumber-box{
+    margin-left: 20rpx;
+    flex-direction: column;
+}
+
+.floor-nickname{
+    font-weight: 1000;
+    font-size: 30rpx;
+    display: block;
+}
+
+.floor-number{
+    color: gray;
+    font-size: 25rpx;
+    display: block;
+}
+
+.publish-time{
+    color: gray;
+    font-size:25rpx;
+    margin-left:270rpx;
+}
+
+.cite-box{
+    position: relative;
+    background-color: rgb(247,248,250);
+    display: block;
+    max-height: 30%;
+    border-radius: 10rpx;
+    padding:20rpx 20rpx;
+    margin:20rpx 20rpx;
+}
+
+.cite{
+    font-size: 30rpx;
+}
+
+.reply{
+    display:block;
+    height: 30%;    /*自适应*/
+    max-height: 30%;
+    position: relative;
+    font-size:35rpx;
+    padding:20rpx 20rpx;
+    margin:20rpx 20rpx;
+}
+
+.divLine{
+    background: #E0E3DA;
+    width: 100%;
+    height: 3rpx;
+    justify-self: center;
+}
