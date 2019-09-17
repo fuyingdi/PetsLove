@@ -9,36 +9,86 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postData:{
-      picture:[
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567510647520&di=101e876fdc76b9645a9f1abb69bb18e4&imgtype=0&src=http%3A%2F%2F09.imgmini.eastday.com%2Fmobile%2F20180511%2F20180511110022_2780320ae825163e89066d2e841b9cb8_1.jpeg",
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567510647520&di=101e876fdc76b9645a9f1abb69bb18e4&imgtype=0&src=http%3A%2F%2F09.imgmini.eastday.com%2Fmobile%2F20180511%2F20180511110022_2780320ae825163e89066d2e841b9cb8_1.jpeg",
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567510647520&di=101e876fdc76b9645a9f1abb69bb18e4&imgtype=0&src=http%3A%2F%2F09.imgmini.eastday.com%2Fmobile%2F20180511%2F20180511110022_2780320ae825163e89066d2e841b9cb8_1.jpeg",
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567510647520&di=101e876fdc76b9645a9f1abb69bb18e4&imgtype=0&src=http%3A%2F%2F09.imgmini.eastday.com%2Fmobile%2F20180511%2F20180511110022_2780320ae825163e89066d2e841b9cb8_1.jpeg",
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567510647520&di=101e876fdc76b9645a9f1abb69bb18e4&imgtype=0&src=http%3A%2F%2F09.imgmini.eastday.com%2Fmobile%2F20180511%2F20180511110022_2780320ae825163e89066d2e841b9cb8_1.jpeg",
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567510647520&di=101e876fdc76b9645a9f1abb69bb18e4&imgtype=0&src=http%3A%2F%2F09.imgmini.eastday.com%2Fmobile%2F20180511%2F20180511110022_2780320ae825163e89066d2e841b9cb8_1.jpeg",
-      
-      ],
-    },
+    postData:{},
     floorList:[],
     inputSectionBottom:0,
-    replyFloor:0,
+    replyFloor:"",
+    actualReply:0,
     inputFocus:false,
     inputMessage:"",
+    page:1,
+    inputHolder:"",
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-    
+    var that = this;
+    var now = new Date().getTime();
+    var nextPage = this.data.page + 1;
+    var options_id = options.post_id;
+    app.petloveRequest({
+      url:api.getPost,
+      method:"POST",
+      data:{
+        post_id:options_id,
+        type:1
+      },
+      success(res){
+        that.setData({
+          postData:res.data,
+          replyFloor:res.data.post_id,
+          inputHolder:"评论点赞，都要勇往直前~"
+        })
+      },
+      fail(){
+        console.log("showPost获取帖子内容失败");
+      }
+    });
+    app.petloveRequest({
+      url:api.getFloorList,
+      method:"POST",
+      data:{
+        post_id:options_id,
+        query_time:now,
+        page:1,
+        type:1
+      },
+      success(res){
+        that.setData({
+          floorList:res.data,
+          page:nextPage
+        })
+      },
+      fail(res){
+        console.log("showPost首次加载回复失败");
+      }
+    })
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
-
+    var that = this;
+    var oldList = that.data.floorList;
+    var nextPage = that.data.page + 1;
+    var now = new Date().getTime();
+    app.petloveRequest({
+      url:api.getFloorList,
+      method:"POST",
+      data:{
+        post_id:that.data.postData.post_id,
+        query_time:now,
+        page:that.data.page,
+        type:1
+      },
+      success(res){
+        var newList = oldList.concat(res.data);
+        that.setData({
+          floorList:newList,
+          page:nextPage
+        })
+      },
+      fail(res){
+        console.log("showPost之后加载回复失败");
+      }
+    })
   },
 
   onUnload:function(){
@@ -46,11 +96,21 @@ Page({
   },
   //点击楼层回复时调用
   bindtapReply:function(e){
+    var tip = "回复给"+e.currentTarget.dataset.citename+"：";
     this.setData({
-      replyFloor:e.currentTarget.id,
-      inputFocus:true
+      replyFloor:e.currentTarget.dataset.floorid,
+      inputFocus:true,
+      inputHolder:tip,
     })
-    console.log("reply:"+this.data.replyFloor);
+  },
+  //
+  bindblurInput:function(e){
+    this.setData({
+      inputSectionBottom:0,
+      actualReply:this.data.replyFloor,
+      replyFloor:"",
+      inputHolder:"评论点赞，都要勇往直前~",
+    })
   },
   //聚焦输入框时调用
   bindfocusInput:function(e){
@@ -59,27 +119,62 @@ Page({
       inputSectionBottom:e.detail.height
     })
   },
-  //失去焦点
-  bindblurInput:function(){
-    //设置输入框bottom为0，收回输入框到底部
-    //将回复的楼层清空为0
-    this.setData({
-      inputSectionBottom:0,
-      replyFloor:0
-    })
-  },
   //发送回复
-  bindtapSendReply:function(){
+  bindtapSendReply:function(e){
+    var that = this;
     //向服务器发送回复内容
-    // app.petloveRequest({
-
-    // });
-
+    app.petloveRequest({
+      url:api.addFloor,
+      method:"POST",
+      data:{
+        post_id:that.data.postData.post_id,
+        content:that.data.inputMessage,
+        cite_id:that.data.actualReply,
+        type:"1"
+      },
+      success(res){
+        console.log("回复成功");
+      },
+      fail(res){
+        console.log("回复失败");
+      }
+    })
     //清空收回输入框
     this.setData({
+      actualReply:0,
       inputSectionBottom:0,
-      replyFloor:0,
-      inputMessage:""
+      replyFloor:"",
+      inputMessage:"",
+      page:1,
+      inputHolder:"评论点赞，都要勇往直前~",
+    })
+    //更新显示的回复
+    var nextPage = that.data.page + 1;
+    var now = new Date().getTime();
+    app.petloveRequest({
+      url:api.getFloorList,
+      method:"POST",
+      data:{
+        post_id:that.data.postData.post_id,
+        query_time:now,
+        page:1,
+        type:1
+      },
+      success(res){
+        that.setData({
+          floorList:res.data,
+          page:nextPage
+        })
+      },
+      fail(res){
+        console.log("showPost首次加载回复失败");
+      }
+    })
+  },
+
+  bindInputMsg:function(e){
+    this.setData({
+      inputMessage:e.detail.value,
     })
   }
 })

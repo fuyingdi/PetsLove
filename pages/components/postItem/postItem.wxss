@@ -22,7 +22,6 @@ page{
     width:90rpx;
     height: 90rpx;
     border-radius: 45rpx;
-    background-color:black;
 }
 
 .post-nickname{
@@ -44,6 +43,8 @@ page{
     padding: 0rpx 20rpx;
     margin:15rpx 0rpx;
     font-size: 35rpx;
+    word-wrap: break-word;
+    word-break:break-all;
 }
 
 .image-box{

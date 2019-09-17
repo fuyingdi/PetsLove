@@ -3,23 +3,14 @@ var app = getApp();
 
 Page({
   data: {
-    userInfo:{
-      avatarUrl:"./icon/icon.jpg",
-      nickName:"浪先生",
-      sign:"浪先生生气了"
-    }
+    userInfo: {}
   },
-  onShow:function(){
-    var avatar = app.globalData.userInfo.avatar;
-    var nickName = app.globalData.userInfo.nickname;
-    var sign = app.globalData.userInfo.signature;
+  onShow: function () {
     this.setData({
-      'userInfo.avatarUrl':avatar,
-      'userInfo.nickName':nickName,
-      'userInfo.sign':sign
+      userInfo: app.globalData.userInfo
     });
-  }
-  
+  },
+
 
 
 })

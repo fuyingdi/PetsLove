@@ -1,0 +1,29 @@
+@font-face {font-family: "petlove";
+  src: url('iconfont.eot?t=1568258727581'); /* IE9 */
+  src: url('iconfont.eot?t=1568258727581#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQIAAsAAAAACDgAAAO5AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDfINmATYCJAMQCwoABCAFhGEHSxtPBxEVnL3IfiRkp0VXwJqDT4Ykvprggfoz3/yZYEUWUFBAJzh7rKxszWxhJwB8n22RT0JfSFjkdWgn1sD/wMcbO/v7Q9W8zAE2P4Bn7X0+JmAoGg3Q3p62hBWrmHadrhK4ZiavIQBXIklH1K7b2IQRhbFJAKJ/n15dMKasqJpGgRGBvuSkEmIqOozaOO08MMX/ffGGXGEEDZ3E2Nm8Z53uVH/O8xRpc9po72KQjecG5DmQQDqgQPQu9XZFhtl0JK5KuaIQMJpuDcaakM9TnE6W70Vr5H95INEQIPQY9e4A5FNOwnNsaSxHMxrqUlB+Ay8pAIyAHlgJXw16OBrN/EZ39+JEn4iR16+bbtwwV1RYHY4OlS2mplZLM7O1imn4+PXC4bCsXhy0oSIQN6mw3UiZtTAe1WsrxK1T60M3l1UY5Ak3wrb0uclDjLKttfZZsLN45ur5C4LO1TvRgpq9sHTm2pFXHeOvs9qWV0/oXVHmaO3KzBFNwtXhlm1wcxPcCesCcJtlW+sfLWvY1b+/Cjj2f/886u+/eNffv1qj81MnjJ8QPmX8lKnhvghVB/F2sqNrePp4YjZNbJhirHPhQESdJNGif7/mjkoIEaqS0vMPXKhjbJhimojZ0ye82c6OlmVN8xpcbNYnsX39+u0TelkiTxSF+jS72KBIVFxBR0+faUOG41mt05ukfvh8ZP1kYRo8qJX2ceauoaeH7hr5sHrHxIYNkzr1q365bfOCtqvo4uFD3vJ9/5fW2GGVjh5dc+n2mks819KaO9A0ZnSk2oFz5wfby919wnw8yu2eTPO0YzzAY89hBgPgtMujsqaAcqiWPykPykq/fRWVvQY+6eRV+ZvR7brHbi25s4YiTruin+zfyVrLfrJWaX1KVRjSQqWtU+3jKDr2TmuAqxkEJwV9uT+GPkBJg8CQkknQCOEgCXGgCKlIhxs5SI+BysiVNGqdd8OPgUiEcgFSKQMk8GQDaIR9IAmnQBFuIB2BPEF6PPmFXLEIw41uJEpEuqulKA0NVX/qa1nYOmu7wbBJPrihfU+lktxb94JuvSwUuH6ukGCB9t+zfdrQjIlVZooHeg/TJLSqDKjN7czWyPO47IfcWmZnRy1FaWiI6k/0tSzs/jXbMRg2yQc3tO+p1PImKXhldetHmY4IcPHrIdEubZquYf/2aUPMmGCql5mIV+XFNIaXWMuXDajNpeuRXiM8cxi31bq708+PTiLbMA4ooQkplNBhyFAcosg/xtpjaY4ZZdOc8I1TFscBAAAA') format('woff2'),
+  url('iconfont.woff?t=1568258727581') format('woff'),
+  url('iconfont.ttf?t=1568258727581') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1568258727581#petlove') format('svg'); /* iOS 4.1- */
+}
+
+.petlove {
+  font-family: "petlove" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-reject:before {
+  content: "\e629";
+}
+
+.icon-friend:before {
+  content: "\e603";
+}
+
+.icon-addNewFriend:before {
+  content: "\e600";
+}
+

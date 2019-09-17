@@ -1,32 +1,25 @@
 <!--pages/addItem/addItem_share.wxml-->
 <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
     <view class="page__bd">
-        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errMsg}}</view>
 
-        <view class="page__bd">
-          <view class="weui-btn-area">
-            <button class="weui-btn" type="default" bindtap="open">宠物类型</button>
-          </view>
-        </view>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <button class="weui-btn" type="default">选择宠物类型</button>
+            <view>当前选择：{{petInfo.bleed}}</view>
+        </picker>
 
-        <view class="weui-cells__title">宠物品种</view>
-        <view class="weui-cells weui-cells_after-title">
-            <radio-group bindchange="radioChange">
-                <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
-                    <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
-
-                    <view class="weui-cell__bd">{{item.name}}</view>
-                    <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
-                        <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
-                    </view>
-                </label>
-            </radio-group>
-        </view>
 
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
                 <view class="weui-cell__bd">
-                    <input class="weui-input" placeholder="宠物名" />
+                    <input class="weui-input" placeholder="宠物名" bindinput="inputPetName"/>
+                </view>
+            </view>
+        </view>
+                <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="价格" bindinput="inputPrice" />
                 </view>
             </view>
         </view>
@@ -34,8 +27,8 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
                 <view class="weui-cell__bd">
-                    <textarea class="weui-textarea" placeholder="宠物描述" style="height: 3.3em" bindinput="textAreaInput" />
-                    <view class="weui-textarea-counter">{{textAreaCount}}/140</view>
+                    <textarea class="weui-textarea" placeholder="宠物描述" style="height: 3.3em" bindinput="textAreaInput" maxlength="150"/>
+                    <view class="weui-textarea-counter">{{textAreaCount}}/150</view>
                 </view>
             </view>
         </view>
@@ -47,23 +40,20 @@
                     <view class="weui-uploader">
                         <view class="weui-uploader__hd">
                           <view class="weui-uploader__overview">
-                              <view class="weui-uploader__title">图片上传</view>
-                              <view class="weui-uploader__info">{{files.length}}/9</view>
+                              <view class="weui-uploader__title">图片上传(*至少上传一张)</view>
+                              <view class="weui-uploader__info">{{petInfo.picture.length}}/9</view>
                           </view>
-                          <!-- <view class="weui-uploader__tips">
-                            上传提示
-                          </view> -->
                         </view>
                         <view class="weui-uploader__bd">
-                            <view class="weui-uploader__files" id="uploaderFiles">
-                                <block wx:for="{{files}}" wx:key="*this">
-                                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
-                                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                            <view class="weui-uploader__petInfo.picture" id="uploaderpetInfo.picture">
+                                <block wx:for="{{petInfo.picture}}" wx:key="*this">
+                                    <view class="weui-uploader__file" bindtap="cancel" id="{{item}}">
+                                        <image class="weui-uploader__img" data-photoid="{{index}}" src="{{item}}" mode="aspectFill" />
                                     </view>
                                 </block>
 
                             </view>
-                            <view wx:if="{{files.length<9}}" class="weui-uploader__input-box">
+                            <view wx:if="{{petInfo.picture.length<9}}" class="weui-uploader__input-box">
                                 <view class="weui-uploader__input" bindtap="chooseImage"></view>
                             </view>
                         </view>
@@ -76,7 +66,7 @@
        
 
         <view class="weui-btn-area">
-            <button class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+            <button class="weui-btn" type="primary" bindtap="sendTradeInfo">确定</button>
         </view>
     </view>
 </view>

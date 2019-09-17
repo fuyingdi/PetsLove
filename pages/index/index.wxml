@@ -1,5 +1,4 @@
-<!-- ? -->
-<postInfo data-id="{{post_item.post_id}}" wx:for="{{postdata}}" wx:for-item="post_item" postdata="{{post_item}}"
+<postInfo data-id="{{post_item.post_id}}" wx:for="{{postdata}}" wx:for-item="post_item" postInfo="{{post_item}}"
 bind:tap="bindtapShowPost">
 
 </postInfo>

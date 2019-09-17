@@ -1,0 +1,50 @@
+page {
+    height: 100%;
+    width: 100%;
+}
+
+.item-box {
+    display: block;
+    height: 120rpx;
+    width: 100%;
+    border-bottom: 1px solid #DADADA;
+}
+
+.avatar {
+    position: absolute;
+    left: 10rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 20rpx;
+    margin-top: 10rpx;
+}
+
+.bubble {
+    position: absolute;
+    left: 85rpx;
+    margin-top: 5rpx;
+    width: 34rpx;
+    height: 34rpx;
+    border-radius: 17rpx;
+    background-color: red;
+    text-align: center;
+    line-height: 34rpx;
+    font-size: 25rpx;
+    font-weight:600;
+    color: white;
+}
+
+.nickname {
+    position: absolute;
+    left: 140rpx;
+    margin-top: 15rpx;
+    font-size: 35rpx;
+    font-weight: 700;
+}
+
+.msg {
+    position: absolute;
+    left: 140rpx;
+    margin-top: 70rpx;
+    font-size: 30rpx;
+}

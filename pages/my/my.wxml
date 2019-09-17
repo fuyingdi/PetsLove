@@ -2,16 +2,16 @@
   <navigator url="/pages/myInfo/myInfo" >
   <view class="my-info">
     <view class="avatar">
-      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <image  class="userinfo-avatar" src="{{userInfo.avatar}}" mode="cover"></image>
     </view>
-    <view> <text class="nickname">{{userInfo.nickName}}{{"\n"}}</text> 
-            <text class="sign">{{userInfo.sign}}</text></view>
+    <view> <text class="nickname">{{userInfo.nickname?userInfo.nickname:'未填写'}}{{"\n"}}</text> 
+            <text class="sign">{{userInfo.signature?userInfo.signature:'未填写'}}</text></view>
     <view class='my-info-arrow'/>
   </view>
   </navigator>
 
   <view class="my-action">
-    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <navigator url="/pages/album/album" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="item">
           <image src="./icon/album.png" style="margin-right: 10rpx;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
       </view>

@@ -1,19 +1,17 @@
 <!-- <postItem postItemData="{{postData}}"></postItem> -->
 <!-- <floor wx:for="{{floorList}}" wx:for-item="floorItem" floorData="{{floorItem}}"></floor> -->
 <postItem postItemData="{{postData}}"></postItem>
-<floor bind:tap="bindtapReply" id="1"></floor>
-<floor bind:tap="bindtapReply" id="1"></floor>
-<floor bind:tap="bindtapReply" id="1"></floor>
-<floor bind:tap="bindtapReply" id="1"></floor>
+<floor bind:tap="bindtapReply" wx:for="{{floorList}}" wx:for-item="item" wx:for-index="index" 
+ data-floorid="{{floorList[index].floor_id}}" data-citename="{{floorList[index].nickname}}" floorNumber="{{index}}" floorData="{{item}}"></floor>
 
 
 <!-- 用于防止最后一个帖子被遮挡住 -->
 <view style="height:100rpx"></view>
 
 <view class="input-box" style="bottom:{{inputSectionBottom}}px;">
-    <input class='input-field' focus="{{inputFocus}}" value="{{inputMessage}}" placeholder="请输入内容" bind:focus="bindfocusInput"
+    <input class='input-field' focus="{{inputFocus}}" value="{{inputMessage}}" placeholder="{{inputHolder}}" bind:focus="bindfocusInput"
     bindinput='bindInputMsg' bindblur="bindblurInput" confirm-type="send" bindconfirm="sendTextMsg" 
-    adjust-position='{{false}}' />
-    <button bind:tap="bindtapSendReply" type="primary" class="reply-button" size="mini">发送</button>
+    adjust-position='{{false}}'/>
+    <button id="sendButton" bind:tap="bindtapSendReply" type="primary" class="reply-button" size="mini">发送</button>
 </view>
 

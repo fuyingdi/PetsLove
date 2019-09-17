@@ -5,6 +5,11 @@ Component({
             data:""
         },
 
+        notChoosed:{
+            type:Boolean,
+            data:"true"
+        }
+
     },
 
     data:{

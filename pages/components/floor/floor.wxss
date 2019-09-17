@@ -38,7 +38,6 @@ page{
     position: relative;
     background-color: rgb(247,248,250);
     display: block;
-    height: 30%;
     max-height: 30%;
     border-radius: 10rpx;
     padding:20rpx 20rpx;

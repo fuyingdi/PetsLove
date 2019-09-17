@@ -1,0 +1,17 @@
+<scroll-view scroll-y>
+    <block wx:for="{{messageBoxData}}" wx:key="{{item.item.from}}">
+        <view class="item-box" wx:if="{{item.number > 0}}" bindtap="startChat" data-to="{{item}}" bindlongpress="delete">
+            <image src="{{item.avatar}}" class="avatar" />
+            <view class="bubble">{{item.number}}</view>
+            <view class="nickname">{{item.nickname}}</view>
+            <view class="msg">{{item.msg}}</view>
+        </view>
+    </block>
+    <block wx:for="{{messageBoxData}}" wx:key="{{item.item.from}}">
+        <view class="item-box" wx:if="{{item.number <= 0}}" bindtap="startChat" data-to="{{item}}" bindlongpress="delete">
+            <image src="{{item.avatar}}" class="avatar" />
+            <view class="nickname">{{item.nickname}}</view>
+            <view class="msg">{{item.msg}}</view>
+        </view>
+    </block>
+</scroll-view>

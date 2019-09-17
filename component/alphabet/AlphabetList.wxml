@@ -1,0 +1,70 @@
+<scroll-view scroll-y style="height: {{windowHeight}}px" scroll-into-view="{{alpha}}">
+    <view class="alphabet">
+        <view class="alphabet-list">
+            <!-- 菜单 -->
+            <view class="section-item">
+                <view class="section-item-cells">
+                    <view class="section-item-cell">
+                        <input placeholder="搜索好友" bindinput="search" />
+                    </view>
+                </view>
+                <navigator url="/pages/chat/newFriend/newFriend">
+                <view class="section-item-cells">
+                    <view class="section-item-cell">
+                        <image class='avater' src='/pages/img/addFriend.png'></image>
+                        <text>添加朋友</text>
+                    </view>
+                </view>
+                </navigator>
+                <navigator url="/pages/chat/friendRequest/friendRequest">
+                <view class="section-item-cells">
+                    <view class="section-item-cell">
+                        <image class='avater' src='/pages/img/friendRequest.png' style="width:75rpx;height:75rpx;margin-left:5rpx;"></image>
+                        <view class="bubble" wx:if="{{requestNumber > 0}}">{{requestNumber}}</view>
+                        <text>好友请求</text>
+                    </view>
+                </view>
+                </navigator>
+                <navigator url="/pages/chat/messageBox/messageBox">
+                    <view class="section-item-cells">
+                        <view class="section-item-cell">
+                            <image class='avater' src='/pages/img/messageBox.png' style="width:75rpx;height:75rpx;margin-left:5rpx;"></image>
+                            <view class="bubble" wx:if="{{messageNumber > 0}}">{{messageNumber}}</view>
+                            <text>消息</text>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator url="/pages/chat/friendList/friendList" open-type="reLaunch">
+                    <view class="section-item-cells">
+                        <view class="section-item-cell">
+                            <image class='avater' src='/pages/img/refresh.png' style="width:75rpx;height:75rpx;margin-left:5rpx;"></image>
+                            <text>刷新列表和消息</text>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+            <!-- 遍历字母生成盒子 -->
+            <view wx:for="{{showList}}" id="{{index}}" class="section-item" wx:key="{{index}}">
+                <!-- 生成字母表头 -->
+                <view wx:if="{{item != ''}}">
+                    <view class="section-item-header">{{index}}</view>
+                </view>
+                <!-- 遍历单字母对应的用户信息 -->
+                <view wx:for="{{item}}" wx:for-item="cell" wx:for-index="cellIndex" class="section-item-cells" wx:key="{{index}}">
+                    <!-- 单个用户信息 -->
+                    <view class="section-item-cell {{cellIndex != (item.datas.length-1) ? 'border-bottom':''}}" data-to="{{cell}}" bindtap="startChat">
+                        <image class='avater' src='{{cell.avatar}}'></image>
+                        <text>{{cell.nickname}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<!-- 字母选择器 -->
+<view data-id="selector" hidden="{{selectorShow}}" catchtouchstart="handlerAlphaTap" catchtouchmove="handlerMove" catchtouchend='handlerEnd' style='height:{{windowHeight}}px;' class="alphanet-selector {{addBg?'bg':''}}">
+    <view data-ap="{{index}}" wx:for="{{showList}}" class="selector-one" wx:key="{{index}}">
+        {{index}}
+    </view>
+</view>
+<view wx:if="{{addBg}}" class='show-alpha'>{{alpha}}</view>

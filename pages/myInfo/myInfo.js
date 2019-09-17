@@ -4,32 +4,24 @@ var app = getApp();
 Page({
   data: {
     modifiedFlag: false,
-    userInfo: {
-      nickname: '未填写',
-      gender: 0,
-      email: '未填写',
-      signature: '还没有自己的个性签名',
-      birthday: '',
-      country: '',
-      province: '',
-      city: ''
-    },
-    region: ["河北省", "秦皇岛", "海港区"],
+    userInfo: {},
     genderrange: ['女', '男'],
     wordCount: 0
   },
   onLoad: function () {
     console.log("onLoad");
-    if (Object.keys(app.globalData.userInfo).length == 0)
+    if (!app.globalData.userInfo)
       return;
     console.log("not null");
     this.setData({
       userInfo: app.globalData.userInfo
     })
     console.log(this.data.userInfo);
-    this.setData({
-      wordCount: this.data.userInfo.signature.length
-    })
+    if (this.data.userInfo.signature)
+      this.setData({
+        wordCount: this.data.userInfo.signature.length
+      })
+
   },
 
   //在切入其它页面时，如modifiedFlay为true，即信息被更改过
@@ -147,24 +139,25 @@ Page({
         var tempPhotopath = res.tempFilePaths[0];
         console.log(res.tempFilePaths[0]);
         wx.uploadFile({
-          url: api.modifyUserAvatar,
+          url: api.changeAvatar,
           filePath: tempPhotopath,
           name: 'file',
+          header: app.globalData.header,
           success: function (uploadRes) {
             console.log(uploadRes.data)
-            if(uploadRes.type=="error"){
+            if (uploadRes.type == "error") {
               wx.showToast({
-                icon:"none",
-                title:uploadRes.msg
+                icon: "none",
+                title: uploadRes.msg
               })
-            }else{
+            } else {
               wx.showToast();
-            
+
               console.log(uploadRes['data'])
               // console.log(JSON.parse(uploadRes['data'])['avatar'])
               var avatar = JSON.parse(uploadRes['data'])['avatar']
               that.setData({
-                [useravatar]:avatar
+                [useravatar]: avatar
               })
             }
           }
@@ -173,12 +166,12 @@ Page({
 
     })
 
-},
+  },
 
 
-modified: function () {
-  this.setData({
-    modifiedFlag: true
-  })
-}
+  modified: function () {
+    this.setData({
+      modifiedFlag: true
+    })
+  }
 })

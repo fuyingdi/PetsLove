@@ -1,57 +1,64 @@
 {
-  "pages": [
-    "pages/showPost/showPost",
-    "pages/index/index",
-    "pages/my/my",
-	  "pages/market/market",
-    "pages/album/album",
-    "pages/addItem/addItem",
-    "pages/myInfo/myInfo",
-    "pages/login/login",
-
-    "pages/addItem/addItem_share",
-    "pages/addItem/addItem_sell"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
-    "onReachBottomDistance":50
-  },
-  "tabBar":{
-    "list":[
-      {
-        "pagePath":"pages/index/index",
-        "iconPath":"/pages/img/home.png",
-        "selectedIconPath":"/pages/img/homeSelected.png",
-        "text":"广场"
-      },
-      {
-        "pagePath":"pages/market/market",
-        "iconPath":"/pages/img/market.png",
-        "selectedIconPath":"/pages/img/marketSelected.png",
-        "text":"市场"
-      },
-      {
-        "pagePath":"pages/addItem/addItem",
-        "iconPath":"/pages/img/addIcon.png",
-        "selectedIconPath":"/pages/img/addIcon.png",
-        "text":"发布"
-      },
-      {
-        "pagePath":"pages/album/album",
-        "iconPath":"/pages/img/album.png",
-        "selectedIconPath":"/pages/img/albumSelected.png",
-        "text":"相册"
-      },
-      {
-        "pagePath":"pages/my/my",
-        "iconPath":"/pages/img/my.png",
-        "selectedIconPath":"/pages/img/mySelected.png",
-        "text":"我的"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/login/login",
+        "pages/chat/chatFrame/chatFrame",
+        "pages/chat/friendRequest/friendRequest",
+        "pages/chat/friendList/friendList",
+        "pages/chat/newFriend/newFriend",
+        "pages/my/my",
+        "pages/market/market",
+        "pages/album/album",
+        "pages/addItem/addItem",
+        "pages/myInfo/myInfo",
+        "pages/chat/messageBox/messageBox",
+        "pages/showPost/showPost",
+        "pages/showTrade/showTrade",
+        "pages/chat/hisInfo/hisInfo",
+        "pages/addItem/addItem_share",
+        "pages/addItem/addItem_sell"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black",
+        "onReachBottomDistance": 50
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "/pages/img/home.png",
+                "selectedIconPath": "/pages/img/homeSelected.png",
+                "text": "广场"
+            },
+            {
+                "pagePath": "pages/market/market",
+                "iconPath": "/pages/img/market.png",
+                "selectedIconPath": "/pages/img/marketSelected.png",
+                "text": "市场"
+            },
+            {
+                "pagePath": "pages/addItem/addItem",
+                "iconPath": "/pages/img/addIcon.png",
+                "selectedIconPath": "/pages/img/addIcon.png",
+                "text": "发布"
+            },
+            {
+                "pagePath": "pages/chat/friendList/friendList",
+                "iconPath": "/pages/img/chat.png",
+                "selectedIconPath": "/pages/img/chatSelected.png",
+                "text": "聊天"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "iconPath": "/pages/img/my.png",
+                "selectedIconPath": "/pages/img/mySelected.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
 }

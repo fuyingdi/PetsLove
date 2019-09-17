@@ -1,0 +1,23 @@
+<view class="title" bindtap="refresh">好友请求（点击刷新）</view>
+<view class="scroll-view" bindscrolltoupper="refresh">
+    <view wx:if="{{newUserList}}">
+        <block wx:for="{{newUserList}}" wx:for-item="newUser" wx:key="{{newUser.account}}">
+            <view class="avatar-info-box">
+                <image src="{{newUser.avatar}}" class="avatar" />
+                <view class="flex">
+                    <view class="his-nickname">{{newUser.nickname}}</view>
+                    <view class="{{newUser.gender == 0 ? 'female':'male'}}">{{newUser.gender == 0 ? '♀':'♂'}}</view>
+                    <view class="location">{{newUser.country}} {{newUser.province}} {{newUser.city}}</view>
+                    <view class="signature">{{newUser.signature}}</view>
+                </view>
+                <view class="menu-box">
+                    <span class="menu icon petlove icon-addNewFriend" style="font-size:100rpx;color:#36ab60;"  data-account1="{{newUser.account}}" bindtap="addFriend"></span>
+                    <span class="menu icon petlove icon-reject" style="font-size:100rpx;color:#d81e06;" data-account1="{{newUser.account}}" bindtap="rejectFriend" ></span>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view wx:else class="welcome">
+        还没有人添加你哦~
+    </view>
+</view>

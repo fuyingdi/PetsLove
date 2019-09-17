@@ -26,3 +26,18 @@ page {
     margin-left: 6rpx;
     margin-top: 7rpx;
 }
+
+
+.add_btn{
+    width: 100%;
+    position: fixed;
+    bottom: 0rpx;
+}
+
+.btn{
+    margin-top: 30rpx;
+    width: 100%;
+    background: rgb(26, 173, 25);
+    color: #fff;
+}
+

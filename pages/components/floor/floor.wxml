@@ -1,11 +1,11 @@
 <view class="floor-box">
     <view class="avatar-nickname-box">
-        <image src="{{}}" class="avatar" />
-        <text class="floor-nickname">yangyi</text>
+        <image src="{{floorData.avatar}}" class="avatar" />
+        <text class="floor-nickname">{{floorData.nickname}}</text>
     </view>
-    <view  class="cite-box">
-        <text class="cite">91夯先生锒铛入狱了</text>
+    <view wx:if="{{!(floorData.cite_content === '' )}}" class="cite-box">
+        <text class="cite">{{floorData.cite_content}}</text>
     </view>
-    <text class="reply">wdnmd真就扫黄啊</text>
+    <text class="reply">{{floorData.content}}</text>
     <view class="divLine"></view>
 </view>

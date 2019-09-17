@@ -1,8 +1,20 @@
+<!-- post_id  
+avatar(url)帖子创建者的头像  
+nickname(text)  
+outline(text)长度在80个字符之内  
+picture(array)数组内容只有纯粹的String格式的url，照片不超过3张  
+visitor_number(number) -->
 <view class="post-box">
-    <image class="avatar" src="{{postList.avatar}}" />
-    <text class="post-nickname">{{postList.nickname}}</text>
-    <view class="outline">{{postList.outline}}</view>
+    <view class="avatar-nickname-box">
+        <image class="avatar" src="{{postInfo.avatar}}" />
+        <text class="post-nickname">{{postInfo.nickname}}</text>
+    </view>
+    <view class="outline">{{postInfo.outline}}</view>
     <view class="image-box">
-        <image wx:for="{{postList.picture}}" wx:for-item="showpicture" src="{{showpicture}}"/>
+        <image wx:for="{{postInfo.picture}}" wx:for-item="showpicture" wx:for-index="index" data-photoid="{{index}}" class="image" src="{{showpicture.src}}" catch:tap="bindtapPreview" />
+    </view>
+    <view class="function-sheet">
+        <text class="publish-time-text">{{postInfo.publish_time}}</text>
+        <text class="visitor-number-text">浏览数：{{postInfo.visitor_number}}</text>
     </view>
 </view>

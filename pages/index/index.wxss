@@ -1,4 +1,7 @@
 /* pages/index/index.wxss */
+page{
+    background-color: #ededed;
+}
 .inner{
     background-color: red;
 }

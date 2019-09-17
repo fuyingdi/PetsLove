@@ -1,0 +1,23 @@
+<input class="input-box" confirm-type="search" placeholder="🔍宠物情缘账号/昵称" bindconfirm="search" bindinput="input" />
+<view class="my-identity">我的账号 : {{userInfo.account}}</view>
+<view class="scroll-view" animation="{{infoCardAnimation}}">
+    <view wx:if="{{newUserList}}">
+        <block wx:for="{{newUserList}}" wx:for-item="newUser" wx:key="{{newUser.account}}">
+            <view class="avatar-info-box">
+                <image src="{{newUser.avatar}}" class="avatar" />
+                <view class="flex">
+                    <view class="his-nickname">{{newUser.nickname}}</view>
+                    <view class="{{newUser.gender == 0 ? 'female':'male'}}">{{newUser.gender == 0 ? '♀':'♂'}}</view>
+                    <view class="location">{{newUser.country}} {{newUser.province}} {{newUser.city}}</view>
+                    <view class="signature">{{newUser.signature}}</view>
+                </view>
+                <view class="add-box">
+                    <span class="icon petlove icon-addNewFriend" style="font-size:100rpx;color:#36ab60;" data-account="{{newUser.account}}" bindtap="addFriend"></span>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view wx:else class="welcome">
+        快来添加新的朋友把~
+    </view>
+</view>
