@@ -1,8 +1,8 @@
 
 <view class="petSticker">
-    <image src="{{petMessage.photoAddress}}" mode="widthFix"></image>
-    <text>{{petMessage.introducer}}</text>
+    <image src="{{petMessage.picture}}" mode="widthFix"></image>
+    <text>{{petMessage.bleed}}      :       {{petMessage.pet_name}}</text>
     <view class="divLine"></view>
-    <text class="trade">￥{{petMessage.money}}</text>
+    <text class="trade">￥{{petMessage.prospective_price}}</text>
 </view>
 

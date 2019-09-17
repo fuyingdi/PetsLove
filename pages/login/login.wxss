@@ -1,29 +1,54 @@
 /* pages/login/login.wxss */
 
 /**index.wxss**/
-.userinfo {
+
+page {
+  background: #F7F7F7;
+}
+
+.items {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40%;
 }
 
-
-
-.inputcss{
-    font-size:40rpx;
-    height:70rpx;
-    margin-left: 100rpx;
-    margin-right: 100rpx;
-    padding-right: 20rpx;
-    padding-left: 20rpx;
-    border-radius:10rpx;
-    border:2px solid #c8cccf;
-    color:#6a6f77;
+.appIcon {
+  display: block;
+  width: 600rpx;
+  height: 600rpx;
 }
 
-.getUserInfoButton{
-    margin-top: 200rpx;
-    padding-left: 175rpx;
-    padding-right: 175rpx;
+.text-register{
+  font-size: 50rpx;
+  font-weight: 400;
+  color: black;
+}
+
+.text-format{
+  font-size:25rpx;
+}
+
+.inputcss {
+  margin-top:60rpx;
+  font-size: 40rpx;
+  height: 70rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+  border: 2px solid #c8cccf;
+  color: #6a6f77;
+}
+
+.btn-register {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-tip{
+  font-size:30rpx;
+  color:red;
 }

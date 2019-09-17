@@ -1,63 +1,81 @@
 /**index.wxss**/
-@import "../../lib/weui.wxss";
-.userinfo-avatar {
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
+
+page{
+    min-height: 100%;
+    background: #EDEDED;
 }
 
-.avatar-image-box{
-    height:400rpx;
-    text-align: center;
+
+@import "../../lib/weui.wxss";
+.avatar-item{
+    height: 180rpx;
+    padding:5rpx 10rpx;
+    font-size:34rpx;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    display: flex;
     margin-bottom: 5rpx;
-    background-color:#63c0e1;
-    background: linear-gradient(to right,#63c0e1,#92e2d6);
 }
+
 .avatar-image{
-    margin:auto;
-    position:absolute;
-    left:40%;
-    top:5%;
-    width:140rpx;
+    width: 140rpx;
     height: 140rpx;
-    border-radius:70rpx;
-}
-.nickname{
-  position: relative;
-  font-weight: 1200;
-  color: rgb(20,20,20);
-  font-size:1rem;
-  top:55%;
+    border-radius: 50%;
+    margin-left: 230rpx;
 }
 
 .item{
-    height:55rpx;
+    height:90rpx;
     padding:5rpx 10rpx;
-    margin-top:-1rpx;
-    border-top:1rpx solid #CCC;
-    border-bottom:1rpx solid #CCC;
-    font-size:1.2rem;
+    font-size:36rpx;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    margin-bottom: 2rpx;
 }
+
+
+
 
 text{
     display: inline-block;
-    width:40%;
+    width:250rpx;
+    padding-left: 23rpx;
+}
+
+.title{
+    margin-top: 15rpx;
+    margin-bottom: 5rpx;
+    padding-left: 28rpx;
+    padding-right: 25rpx;
+    color: #999999;
+    font-size: 36rpx;
 }
 
 input{
     display: inline-block;
     vertical-align: middle;
+    height: auto;
 }
 
-
-.ali{
-    display:inline-block;
-    width:1.2rem;
-    height:1.2rem;
-    border:1px solid black;
-    background-size: cover;
+.arrow{
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #999;
+    border-right: 4rpx solid #999;
+    transform: rotate(45deg);
+    margin-left: 30rpx;
 }
-.icon-nickname{
-    background-image: url('https://www.wangwei2000.cn/petlove_source/icons/nickname.png') no-repeat;
+
+.textarea{
+    height: 100rpx;
+    padding-left: 28rpx;
+    padding-top: 5rpx;
+    background-color: white;
+}
+
+.bg_lightgrey{
+    background-color: #EDEDED;
 }

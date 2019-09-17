@@ -1,0 +1,23 @@
+<view class="post-box">
+    <view class="avatar-nickname-box">
+        <image class="avatar" src="{{postItemData.avatar}}" />
+        <text class="post-nickname">{{postItemData.nickname}}</text>
+    </view>
+    <text class="title">{{postItemData.title}}</text>
+    <view class="content">
+        {{postItemData.content}}
+    </view>
+    <view class="image-box" >
+        <!-- <image wx:for="{{postItemData.picture}}" wx:for-item="showpicture" src="{{showpicture}}" /> -->
+
+        <image wx:for="{{postItemData.picture}}" wx:for-item="item" src="{{item.src}}" data-photoid="{{index}}"  bind:tap="bindtapShowPhoto" class="image"/>
+    </view>
+    <view class="divLine"></view>
+    <view class="function-sheet">
+        <image wx:if="{{Boolean(postItemData.collected)}}" src="./icon/hascollected.png" class="icon" bind:tap="isCollect"/>
+        <image wx:else src="./icon/collect.png" class="icon" bind:tap="isCollect"/>
+        <image wx:if="{{Boolean(postItemData.liked)}}" src="./icon/haslikes.png" class="icon" bind:tap="isLike" />
+        <image wx:else src="./icon/like.png" class="icon" bind:tap="isLike"/>
+        <!-- <text>没有人觉得很赞</text> -->
+    </view>
+</view>

@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "post": "../components/post/post"
+    "postInfo": "../components/postInfo/postInfo"
   }
 }

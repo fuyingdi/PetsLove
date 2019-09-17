@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "postItem":"/pages/components/postItem/postItem",
+    "floor":"/pages/components/floor/floor"
+  }
+}

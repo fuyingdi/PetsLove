@@ -1,10 +1,11 @@
 
-<view class="userinfo">
-  <text style="font-size:50rpx;margin-bottom:20rpx;color:red">请注册一个用户名</text>
-  <input class="inputcss" placeholder="必填" type="text" bindblur="bindblurAccountInput"/>
-  <text >{{tip[tipIndex]}}</text>
-</view> 
-
-<view class="getUserInfoButton">
-  <button open-type="getUserInfo" bindgetuserinfo="bindgetUserInfo" >登录授权</button>
+<view class="items">
+  <image src="../img/appIcon.jpg" class="appIcon" />
+  <text class="text-register">注册账号</text>
+  <text class="text-format">（必须以英文字母开头，包含数字或英文字母，长度不超过20位）</text>
+  <input class="inputcss" placeholder="必填" type="text" bindinput="checkAccount" />
+  <text class="text-tip">{{tip?tip:""}}</text>
+</view>
+<view class="btn-register">
+  <button open-type="getUserInfo" bindgetuserinfo="bindgetUserInfo" disabled="{{!permit}}">登录授权</button>
 </view>
